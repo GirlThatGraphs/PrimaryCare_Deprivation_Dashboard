@@ -48,8 +48,7 @@ web_data2 <- xml_attrs(web_data_html2[[1]]) %>%
 temp <- tempfile()
 download.file(web_data2,temp)
 data1 <- unz(temp, "gp-reg-pat-prac-lsoa-all.csv")
-data <- read.table(data1,
-                   sep=",",
+data <- read.csv(data1,
                    header = TRUE)
 unlink(temp)
 
